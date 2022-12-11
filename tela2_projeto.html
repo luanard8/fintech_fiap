@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Fintech</title>
+</head>
+
+<body id="corpo" p-10 m-1>
+    
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+          <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+              <img src="img/account.png" width="40" height="40" alt="Perfil">
+              <img src="img/notification2_icon-icons.com_73722.png" width="40" height="40" alt="Notificações">
+            </a>
+          </nav>
+          <a class="navbar-brand" href="#">Fintech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Histórico</a>
+            </li>
+          </span>
+        </div>
+      </nav>
+      </header>
+      <p> Último acesso:</p>
+ 
+      <!-- Data --> 
+
+      <div id="data"></div>
+        <div>
+            <script id="dt">
+            date = new Date().toLocaleDateString();
+            document.write(date);
+            </script>
+            </div>
+<!-- GRAFICO -->
+    <main >
+        <h2>Resumo de Gastos</h2>
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+    
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script>
+
+			google.charts.load('current', {'packages':['corechart']});
+
+			function desenharGraficos(){
+
+				//pizza
+				var tabela = new google.visualization.DataTable();
+				tabela.addColumn('string','categorias');
+				tabela.addColumn('number', 'valores');
+				tabela.addRows([
+					['Educação',2000],
+					['Transporte',500],
+					['Lazer',230],
+					['Saúde',50],
+					['Cartão de crédito',900],
+					['Alimentação',260]
+				]);	
+
+				var opcoes = {
+					
+					height: '400',
+					width: '900',
+					is3D: true,
+					legend: 'labeled',
+					pieSliceText: 'value',
+                    color: 'transparent',
+                    backgroundColor: '838383',
+                   
+                    
+
+					//colors:['grey', 'red', 'blue', 'pink', 'purple']
+					slices: {
+							1:{color:'grey'},
+							2:{color:'#a6a6a6'},
+							4:{offset: 0.4},
+							3:{color:'grey'},
+							5:{color:'grey'}
+							}
+				};
+	
+				var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+				grafico.draw(tabela, opcoes);
+
+				//linha
+				tabela = new google.visualization.DataTable();
+				tabela.addColumn('string','mês');
+				tabela.addColumn('number', 'gastos');
+				tabela.addRows([
+					['jan',800],
+					['fev',400],
+					['mar',1100],
+					['abr',400],
+					['mai',500],
+					['jun',750],
+					['jul',1500],
+					['ago',650],
+					['set',850],
+					['out',400],
+					['nov',1000],
+					['dez',720]
+				]);
+
+				var opcoes = {
+					title: 'Gastos por mês',
+					width: 650,
+					height: auto,
+				}
+
+
+				var grafico = new google.visualization.LineChart(document.getElementById('graficoLinha'));
+				grafico.draw(tabela, opcoes);
+
+			}
+
+			
+			google.charts.setOnLoadCallback(desenharGraficos);					
+		</script>
+
+</section>
+</head>
+<body>
+    <div id="graficoPizza"></div>
+    
+   </body>
+
+
+</main>
+
+
+
+<br><article id="cards" class=" p-10 m-1"></br>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <!-- Cards 01 -->
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Seu saldo atual em conta </h5>
+          <p id="saldo" class="card-text">R$ 9.000,00</p>
+          
+        </div>
+      </div>
+      <div class="card" aria-hidden="true">
+
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+          <a href="#" tabindex="-1" class="btn btn-dark disabled placeholder col-6">Aguarde Gerando Rendimentos</a>
+        </div>
+      </div>
+
+<!-- Cards 02 -->
+
+<br></br>  <div class="card">
+    
+    <div class="card-body">
+        <h5 class="card-title">Sua fatura atual  </h5>
+      <p class="card-text">R$ 800,00</p>
+      
+    </div>
+  </div>
+  <div class="card" aria-hidden="true">
+   <p class="card-text placeholder-glow">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+      <a href="#" tabindex="-1" class="btn btn-dark disabled placeholder col-6">Aguarde Gerando Rendimentos</a>
+    </div>
+  </div>
+   <!-- Cards 03 -->   
+  <br></br>   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Você recebeu </h5>
+      <p class="card-text">R$ 15.000,00</p>
+      
+    </div>
+  </div>
+  <div class="card" aria-hidden="true">
+    <div class="card-body">
+       <h5 class="card-title"></h5>
+        <span class="placeholder col-6"></span>
+      
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+      <a href="#" tabindex="-1" class="btn btn-dark disabled placeholder col-6">Aguarde Gerando Rendimentos</a>
+      
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Cards 04 -->
+
+  <br></br>   <div class="card">
+  
+    <div class="card-body">
+        <h5 class="card-title">Você gastou na semana </h5>
+      <p class="card-text">R$ 700,00</p>
+      
+    </div>
+  </div>
+  <div class="card" aria-hidden="true">
+    
+    <div class="card-body">
+      
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+      <a href="#" tabindex="-1" class="btn btn-dark disabled placeholder col-6">Aguarde Gerando Rendimentos</a>
+    </div>
+  </div>
+    <!-- Cards 05 -->  
+  <br></br>   <div class="card">
+
+    <div class="card-body">
+      <h5 class="card-title">Você gastou nos últimos 60 dias </h5>
+      <p class="card-text">R$ 8.000</p>
+      
+    </div>
+  </div>
+  <div class="card" aria-hidden="true">
+    <div class="card-body">
+       <h5 class="card-title"></h5>
+        <span class="placeholder col-6"></span>
+      
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+      <a href="#" tabindex="-1" class="btn btn-dark disabled placeholder col-6">Aguarde Gerando Rendimentos</a>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+    <!-- Rodapé -->
+    <div id="page-container">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+
+    <div id="content-wrap">
+    </div>
+    <footer id="footer">copyright © 2020</footer>
+    
+     
+  </div>
+  
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
