@@ -1,0 +1,84 @@
+body{
+background-image: linear-gradient(to bottom right, #d3d3d3, black);
+width:100%;
+margin:08 ;
+
+}
+
+section{
+margin: 150px;
+}
+
+
+
+.footer {
+box-sizing: border-box;
+display: block;
+padding: 10px 100;
+margin: 8px;
+max-width: 1000px;
+height: 300px;
+overflow:hidden;
+position: auto;
+bottom: 0px;
+
+}
+
+.formulario {
+    display: block;
+    margin-top: 10em;
+    text-align: center;
+}
+form label {
+    font-size: 20px;
+    display: inline-block;
+    position: sticky;
+    margin-top: 100px;
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 1em;
+    
+   
+   
+}
+
+img{
+    width: 70px;
+    
+}
+
+.copyright{
+    display: block;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0;
+    background-color: black;
+    text-align: center;
+    position: static;
+}
+
+main{ 
+    text-align: center;
+    margin-top: 400px;
+    
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* altura do rodapé */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* altura do rodapé */
+    background-color: black;
+    text-align: center;
+    color: #FFFFFF;
+  }
+

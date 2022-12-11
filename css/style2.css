@@ -1,0 +1,100 @@
+#corpo{
+    background-image: linear-gradient(to right, #FFFF, black)
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* altura do rodapé */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* altura do rodapé */
+    background-color: black;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  #my-pie-chart {
+    height: 100px;
+    width: 100px;
+  }
+
+  #my-pie-chart {
+    border-radius: 50%;
+  }
+
+  #my-pie-chart {
+    background: conic-gradient(brown 20.00%, black 0.00% 0.55%, blue 0.55% );
+  }
+
+main{
+   background-color:#838383;
+   text-align: center;
+
+}
+p{
+    margin-top: auto;
+   
+}
+ script{
+    text-align: center;
+    
+ }
+
+article{
+    margin-top: 9000px;
+    text-align: center;
+   
+
+   
+}
+
+#cards {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    
+ 
+}
+#cards01 {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    background-color: black;
+   
+}
+
+p{
+    color: black;
+    font-weight: bold;
+
+}
+
+h5{
+    color: red;
+    font-weight: bold;
+
+}
+
+#saldo{
+    color:green;
+    
+}
+
+h2{
+    color: #363636;
+    
+}
+
+script{
+    font-weight: bold;
+}
